@@ -40,7 +40,7 @@ public partial class GameManager : Node
 		GD.Print(sceneToLoad);
 		
 		PackedScene scene = GD.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn");
-		
+		// Changing does not work
 		
 		
 
