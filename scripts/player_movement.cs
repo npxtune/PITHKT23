@@ -4,7 +4,7 @@ namespace PITHKT23.scripts;
 public partial class player_movement : CharacterBody2D
 {
 	private const float Speed = 300.0f;
-	private const float JumpVelocity = -400.0f;
+	private float _jumpVelocity = -400.0f;
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	private float _gravity;
@@ -16,6 +16,7 @@ public partial class player_movement : CharacterBody2D
 	{
 		_sceneModifiers = GetNode<scene_modifiers>("/root/world/scene_modifiers");
 		_gravity = _sceneModifiers.GravityModifier;
+		_jumpVelocity = _sceneModifiers.JumpModifier;
 		Vector2 velocity = Velocity;
 
 		// Add the gravity.
@@ -25,7 +26,7 @@ public partial class player_movement : CharacterBody2D
 		// Handle Jump.
 		if (Input.IsActionJustReleased("jump") && IsOnFloor())
 		{
-			velocity.Y = JumpVelocity;
+			velocity.Y = _jumpVelocity;
 			_hasJumped = true;
 		}
 		else
