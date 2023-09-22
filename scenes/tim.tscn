@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b8j2ftayj8kdv"]
 
-[ext_resource type="Script" path="res://scripts/Player.cs" id="1_n5ngc"]
+[ext_resource type="Script" path="res://scripts/player_movement.cs" id="1_hw2ty"]
 [ext_resource type="Texture2D" uid="uid://dip4tr4mjndkk" path="res://assets/icon.svg" id="2_dff4m"]
 [ext_resource type="Script" path="res://scripts/restart.cs" id="3_26kh4"]
 
@@ -13,7 +13,7 @@ size = Vector2(640, 20)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 floor_stop_on_slope = false
-script = ExtResource("1_n5ngc")
+script = ExtResource("1_hw2ty")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_8gu2e")
