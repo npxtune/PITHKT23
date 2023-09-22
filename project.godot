@@ -18,10 +18,16 @@ boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://assets/icon.svg"
 
+<<<<<<< Updated upstream
 [display]
 
 window/size/viewport_width=2560
 window/size/viewport_height=1440
+=======
+[autoload]
+
+GameManagerDev="*res://scenes/GameManagerDev.tscn"
+>>>>>>> Stashed changes
 
 [dotnet]
 
