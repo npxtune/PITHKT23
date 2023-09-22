@@ -1,18 +1,21 @@
 using Godot;
 namespace PITHKT23.scripts;
 
-public partial class Player : CharacterBody2D
+public partial class player_movement : CharacterBody2D
 {
 	private const float Speed = 300.0f;
 	private const float JumpVelocity = -400.0f;
 
 	// Get the gravity from the project settings to be synced with RigidBody nodes.
-	private float _gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
+	private float _gravity;
 	private Vector2 _direction;
 	private bool _hasJumped;
+	private scene_modifiers _sceneModifiers;
 
 	public override void _PhysicsProcess(double delta)
 	{
+		_sceneModifiers = GetNode<scene_modifiers>("/root/world/scene_modifiers");
+		_gravity = _sceneModifiers.GravityModifier;
 		Vector2 velocity = Velocity;
 
 		// Add the gravity.
@@ -48,7 +51,7 @@ public partial class Player : CharacterBody2D
 			}
 		}
 		Velocity = velocity;
-		GD.Print(velocity.X + "\t" + velocity.Y);
+		GD.Print(velocity.X + "\t" + velocity.Y + "\t" + _gravity);
 		MoveAndSlide();
 	}
 }

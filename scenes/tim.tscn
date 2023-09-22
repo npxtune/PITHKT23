@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8j2ftayj8kdv"]
+[gd_scene load_steps=7 format=3 uid="uid://b8j2ftayj8kdv"]
 
 [ext_resource type="Script" path="res://scripts/player_movement.cs" id="1_hw2ty"]
 [ext_resource type="Texture2D" uid="uid://dip4tr4mjndkk" path="res://assets/icon.svg" id="2_dff4m"]
 [ext_resource type="Script" path="res://scripts/restart.cs" id="3_26kh4"]
+[ext_resource type="Script" path="res://scripts/scene_modifiers.cs" id="4_18jwt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8gu2e"]
 
@@ -14,6 +15,7 @@ size = Vector2(640, 20)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 floor_stop_on_slope = false
 script = ExtResource("1_hw2ty")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_8gu2e")
@@ -36,7 +38,11 @@ scale = Vector2(5, 0.125)
 texture = ExtResource("2_dff4m")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -112)
 zoom = Vector2(4, 4)
 
 [node name="restartExample" type="Node2D" parent="."]
 script = ExtResource("3_26kh4")
+
+[node name="scene_modifiers" type="Node2D" parent="."]
+script = ExtResource("4_18jwt")
