@@ -6,7 +6,7 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8gu2e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b8rp7"]
-size = Vector2(352, 20)
+size = Vector2(640, 20)
 
 [node name="world" type="Node2D"]
 
@@ -30,9 +30,9 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_b8rp7")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-1.14441e-05, 1.90735e-06)
-scale = Vector2(2.75, 0.125)
+position = Vector2(-1.52588e-05, 1.90735e-06)
+scale = Vector2(5, 0.125)
 texture = ExtResource("2_dff4m")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+zoom = Vector2(4, 4)
