@@ -22,19 +22,19 @@ public partial class GameManager : Node
 		var currentScene = GetTree().CurrentScene;
 		if (loadSceneIndex == -1)
 		{
-			_nextScene =  Globals.listCounter + 1; 
+			_nextScene =  Globals.ListCounter + 1; 
 		}
 		else
 		{
 			_nextScene = loadSceneIndex; 
 		}
-		if (Globals.scenes.Count == Globals.listCounter + 1)
+		if (Globals.Scenes.Count == Globals.ListCounter + 1)
 		{
 			_allLevelCompleted();
 			return;
 		}
-		Globals.listCounter = _nextScene;
-		var sceneToLoad = Globals.scenes[_nextScene];
+		Globals.ListCounter = _nextScene;
+		var sceneToLoad = Globals.Scenes[_nextScene];
 		GD.Print(sceneToLoad);
 		var scene = ResourceLoader.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn").Instantiate();
 		GetTree().Root.AddChild(scene);
