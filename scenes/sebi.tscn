@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://du7dal527wrk3"]
+[gd_scene load_steps=16 format=3 uid="uid://du7dal527wrk3"]
 
 [ext_resource type="Script" path="res://scripts/PlayerMovement.cs" id="1_syl5h"]
 [ext_resource type="Texture2D" uid="uid://b64pab4cwjqa4" path="res://Textures/Astronaut.png" id="2_0trwk"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/Restart.cs" id="3_dascg"]
 [ext_resource type="Script" path="res://scripts/SceneModifiers.cs" id="4_jdgvr"]
 [ext_resource type="Script" path="res://scripts/CollisionEvents.cs" id="5_uo6fv"]
+[ext_resource type="Texture2D" uid="uid://d1txmxk06toel" path="res://Textures/Background_stars3.png" id="7_h1v3g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8gu2e"]
 
@@ -82,7 +83,7 @@ metadata/_edit_group_ = true
 shape = SubResource("CapsuleShape2D_8gu2e")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(4.76837e-07, -9.53674e-07)
+position = Vector2(0, 123)
 scale = Vector2(1.91406, 1.77344)
 texture = ExtResource("2_0trwk")
 hframes = 4
@@ -139,5 +140,14 @@ shape = SubResource("RectangleShape2D_plu7b")
 position = Vector2(0, -1.00001)
 scale = Vector2(0.15625, 1.5)
 texture = ExtResource("2_7qiot")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1, -106.5)
+scale = Vector2(2.25352, 2.33125)
+texture = ExtResource("7_h1v3g")
 
 [connection signal="body_entered" from="spikes" to="spikes" method="OnSpikesBodyEntered"]
