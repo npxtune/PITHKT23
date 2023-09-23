@@ -1,17 +1,17 @@
-[gd_scene load_steps=20 format=3 uid="uid://khoh2e0pgon1"]
+[gd_scene load_steps=20 format=3 uid="uid://bu22y5ic5e0oy"]
 
-[ext_resource type="Texture2D" uid="uid://pue2na3wwbwa" path="res://Textures/Steine_Tile_map.png" id="1_rtoul"]
-[ext_resource type="Script" path="res://scripts/Restart.cs" id="2_ewfo8"]
-[ext_resource type="Script" path="res://scripts/SceneModifiers.cs" id="3_bud5h"]
-[ext_resource type="Script" path="res://scripts/CollisionEvents.cs" id="4_7y2ys"]
-[ext_resource type="Texture2D" uid="uid://dip4tr4mjndkk" path="res://assets/icon.svg" id="5_x6yg6"]
-[ext_resource type="Texture2D" uid="uid://hd5we2hqw6n6" path="res://Textures/portal.png" id="6_3bvs2"]
-[ext_resource type="Script" path="res://scripts/PlayerMovement.cs" id="7_40j7d"]
-[ext_resource type="Texture2D" uid="uid://b64pab4cwjqa4" path="res://Textures/Astronaut.png" id="8_qvex6"]
-[ext_resource type="Texture2D" uid="uid://crvjs33r0b1pq" path="res://Textures/background_stars2.png" id="9_hx4dx"]
+[ext_resource type="Texture2D" uid="uid://pue2na3wwbwa" path="res://Textures/Steine_Tile_map.png" id="1_0k0w1"]
+[ext_resource type="Script" path="res://scripts/Restart.cs" id="2_rybkd"]
+[ext_resource type="Script" path="res://scripts/CollisionEvents.cs" id="3_83hcw"]
+[ext_resource type="Texture2D" uid="uid://dip4tr4mjndkk" path="res://assets/icon.svg" id="4_y3drp"]
+[ext_resource type="Texture2D" uid="uid://hd5we2hqw6n6" path="res://Textures/portal.png" id="5_fnhoe"]
+[ext_resource type="Script" path="res://scripts/PlayerMovement.cs" id="6_g41nk"]
+[ext_resource type="Texture2D" uid="uid://b64pab4cwjqa4" path="res://Textures/Astronaut.png" id="7_n88i8"]
+[ext_resource type="Texture2D" uid="uid://crvjs33r0b1pq" path="res://Textures/background_stars2.png" id="8_v50q2"]
+[ext_resource type="Script" path="res://scripts/SceneModifiers.cs" id="9_6fp3a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p2whh"]
-texture = ExtResource("1_rtoul")
+texture = ExtResource("1_0k0w1")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -251,12 +251,12 @@ position = Vector2(0, -112)
 zoom = Vector2(5, 5)
 
 [node name="restartExample" type="Node2D" parent="."]
-script = ExtResource("2_ewfo8")
+script = ExtResource("2_rybkd")
 
 [node name="spikes" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(235, 24)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes"]
@@ -265,12 +265,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes2" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(215, 25)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes2"]
@@ -278,12 +278,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes2"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes3" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(203, 24)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes3"]
@@ -291,12 +291,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes3"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes4" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(189, 24)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes4"]
@@ -304,12 +304,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes4"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes5" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(172, 24)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes5"]
@@ -317,12 +317,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes5"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes6" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(156, 25)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes6"]
@@ -330,12 +330,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes6"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes7" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(140, 25)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes7"]
@@ -343,12 +343,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes7"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes8" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(124, 25)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes8"]
@@ -356,12 +356,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes8"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes9" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(110, 25)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes9"]
@@ -369,12 +369,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes9"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes10" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(93, 26)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes10"]
@@ -382,12 +382,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes10"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes11" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(77, 26)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes11"]
@@ -395,12 +395,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes11"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes12" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(42, 25)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes12"]
@@ -408,12 +408,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes12"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes13" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(28, 25)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes13"]
@@ -421,12 +421,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes13"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes14" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(13, 25)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes14"]
@@ -434,12 +434,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes14"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes15" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(-2, 25)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes15"]
@@ -447,12 +447,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes15"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes16" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(-18, 25)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes16"]
@@ -460,12 +460,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes16"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes17" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(-36, 25)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes17"]
@@ -474,12 +474,12 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes17"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="spikes18" type="Area2D" parent="."]
 z_index = -1
 position = Vector2(-36, 25)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes18"]
@@ -488,14 +488,14 @@ shape = SubResource("RectangleShape2D_eo5f0")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes18"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("5_x6yg6")
+texture = ExtResource("4_y3drp")
 
 [node name="CollisionObjects" type="Node" parent="."]
 
 [node name="CollisionModifier" type="Area2D" parent="CollisionObjects"]
 visible = false
 position = Vector2(192, -40)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionObjects/CollisionModifier"]
@@ -504,7 +504,7 @@ shape = SubResource("RectangleShape2D_k5arn")
 
 [node name="Exit" type="Area2D" parent="CollisionObjects"]
 position = Vector2(197, -8)
-script = ExtResource("4_7y2ys")
+script = ExtResource("3_83hcw")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionObjects/Exit"]
@@ -514,13 +514,13 @@ shape = SubResource("RectangleShape2D_7bldn")
 [node name="Sprite2D" type="Sprite2D" parent="CollisionObjects/Exit"]
 position = Vector2(0, -4)
 scale = Vector2(1, 1.5)
-texture = ExtResource("6_3bvs2")
+texture = ExtResource("5_fnhoe")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 z_index = 1
 position = Vector2(-186, -167)
 floor_stop_on_slope = false
-script = ExtResource("7_40j7d")
+script = ExtResource("6_g41nk")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
@@ -529,7 +529,7 @@ shape = SubResource("CapsuleShape2D_1h8e5")
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(4.76837e-07, -9.53674e-07)
 scale = Vector2(1.91406, 1.77344)
-texture = ExtResource("8_qvex6")
+texture = ExtResource("7_n88i8")
 hframes = 4
 vframes = 2
 
@@ -542,11 +542,11 @@ libraries = {
 z_index = -1
 position = Vector2(-3, -110)
 scale = Vector2(1.75704, 1.825)
-texture = ExtResource("9_hx4dx")
+texture = ExtResource("8_v50q2")
 
 [node name="scene_modifiers" type="Node2D" parent="."]
 position = Vector2(-224, -13)
-script = ExtResource("3_bud5h")
+script = ExtResource("9_6fp3a")
 GravityModifier = 400.0
 
 [node name="Gravity-Slider" type="HSlider" parent="scene_modifiers"]
