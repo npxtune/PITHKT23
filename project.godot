@@ -18,6 +18,10 @@ boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+GameManager="*res://scenes/GameManager.tscn"
+
 [display]
 
 window/size/viewport_width=2560
