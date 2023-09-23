@@ -1,11 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://du7dal527wrk3"]
+[gd_scene load_steps=15 format=3 uid="uid://5t0g65b88m23"]
 
-[ext_resource type="Script" path="res://scripts/PlayerMovement.cs" id="1_syl5h"]
-[ext_resource type="Texture2D" uid="uid://b64pab4cwjqa4" path="res://Textures/Astronaut.png" id="2_0trwk"]
-[ext_resource type="Texture2D" uid="uid://dip4tr4mjndkk" path="res://assets/icon.svg" id="2_7qiot"]
-[ext_resource type="Script" path="res://scripts/Restart.cs" id="3_dascg"]
-[ext_resource type="Script" path="res://scripts/SceneModifiers.cs" id="4_jdgvr"]
-[ext_resource type="Script" path="res://scripts/CollisionEvents.cs" id="5_uo6fv"]
+[ext_resource type="Script" path="res://scripts/PlayerMovement.cs" id="1_cf4h5"]
+[ext_resource type="Texture2D" uid="uid://b64pab4cwjqa4" path="res://Textures/Astronaut.png" id="2_jv2ry"]
+[ext_resource type="Texture2D" uid="uid://dip4tr4mjndkk" path="res://assets/icon.svg" id="3_5d1ka"]
+[ext_resource type="Script" path="res://scripts/Restart.cs" id="4_7yqki"]
+[ext_resource type="Script" path="res://scripts/SceneModifiers.cs" id="5_qbhj2"]
+[ext_resource type="Script" path="res://scripts/CollisionEvents.cs" id="6_5ak65"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8gu2e"]
 
@@ -75,7 +75,7 @@ size = Vector2(20, 194)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 floor_stop_on_slope = false
-script = ExtResource("1_syl5h")
+script = ExtResource("1_cf4h5")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
@@ -84,7 +84,7 @@ shape = SubResource("CapsuleShape2D_8gu2e")
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(4.76837e-07, -9.53674e-07)
 scale = Vector2(1.91406, 1.77344)
-texture = ExtResource("2_0trwk")
+texture = ExtResource("2_jv2ry")
 hframes = 4
 vframes = 2
 
@@ -103,21 +103,21 @@ shape = SubResource("RectangleShape2D_b8rp7")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(-1.52588e-05, 1.90735e-06)
 scale = Vector2(5, 0.125)
-texture = ExtResource("2_7qiot")
+texture = ExtResource("3_5d1ka")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -112)
 zoom = Vector2(4, 4)
 
 [node name="restartExample" type="Node2D" parent="."]
-script = ExtResource("3_dascg")
+script = ExtResource("4_7yqki")
 
 [node name="scene_modifiers" type="Node2D" parent="."]
-script = ExtResource("4_jdgvr")
+script = ExtResource("5_qbhj2")
 
 [node name="spikes" type="Area2D" parent="."]
 position = Vector2(-144, 8)
-script = ExtResource("5_uo6fv")
+script = ExtResource("6_5ak65")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spikes"]
@@ -125,7 +125,7 @@ shape = SubResource("RectangleShape2D_miqxu")
 
 [node name="Sprite2D" type="Sprite2D" parent="spikes"]
 scale = Vector2(0.15625, 0.15625)
-texture = ExtResource("2_7qiot")
+texture = ExtResource("3_5d1ka")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(312, 8)
@@ -138,6 +138,6 @@ shape = SubResource("RectangleShape2D_plu7b")
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2/CollisionShape2D"]
 position = Vector2(0, -1.00001)
 scale = Vector2(0.15625, 1.5)
-texture = ExtResource("2_7qiot")
+texture = ExtResource("3_5d1ka")
 
 [connection signal="body_entered" from="spikes" to="spikes" method="OnSpikesBodyEntered"]
