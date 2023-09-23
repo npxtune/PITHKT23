@@ -39,15 +39,13 @@ public partial class PlayerMovement : CharacterBody2D
 		{
 			_direction = Input.GetVector("move_left", "move_right", "ui_up", "ui_down");
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
-			switch (_direction.X)
+			if (_direction.X > 0 && _direction.Y > 0)
 			{
-				case > 0:
-					ap?.Play("Sprung rechts");
-					break;
-				case < 0:
-					ap?.Play("Sprung links");
-					break;
-			}
+                ap.Play("Sprung rechts");
+            } else if (_direction.X < 0 && _direction.Y > 0) 
+			{
+                ap.Play("Sprung links");
+            }
         }
 
 		if (_hasJumped)
