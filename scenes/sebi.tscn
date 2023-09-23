@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://du7dal527wrk3"]
+[gd_scene load_steps=15 format=3 uid="uid://brutwvu8f863j"]
 
 [ext_resource type="Script" path="res://scripts/PlayerMovement.cs" id="1_syl5h"]
 [ext_resource type="Texture2D" uid="uid://b64pab4cwjqa4" path="res://Textures/Astronaut.png" id="2_0trwk"]
@@ -8,6 +8,21 @@
 [ext_resource type="Script" path="res://scripts/CollisionEvents.cs" id="5_uo6fv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8gu2e"]
+
+[sub_resource type="Animation" id="Animation_diigh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_sxdih"]
 resource_name = "Sprung links"
@@ -23,21 +38,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 1, 0]
-}
-
-[sub_resource type="Animation" id="Animation_diigh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_sg5c0"]
