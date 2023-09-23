@@ -15,6 +15,5 @@ public partial class LoadScene : Button
 	{
 		GD.Print("button pressed");
 		_gameManager.LoadNextScene();
-		
 	}
 }

@@ -28,9 +28,7 @@ public partial class GameManager : Node
 		Globals.ListCounter = _nextScene;
 		var sceneToLoad = Globals.Scenes[_nextScene];
 		GD.Print(sceneToLoad);
-		var scene = ResourceLoader.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn").Instantiate();
-		GetTree().Root.AddChild(scene);
-		GetTree().Root.RemoveChild(currentScene);
+		GetTree().ChangeSceneToPacked(ResourceLoader.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn"));
 	}
 
 	private static void _allLevelCompleted()
