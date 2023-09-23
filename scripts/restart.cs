@@ -1,7 +1,7 @@
 using Godot;
 namespace PITHKT23.scripts;
 
-public partial class restart : Node
+public partial class Restart : Node
 {
 	//	This is an example on how to restart the scene by Tim :)
 	//	GetTree().CurrentScene.SceneFilePath -> Gets path of current scene in order to reload it

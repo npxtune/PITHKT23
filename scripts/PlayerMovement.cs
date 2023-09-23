@@ -1,7 +1,7 @@
 using Godot;
 namespace PITHKT23.scripts;
 
-public partial class player_movement : CharacterBody2D
+public partial class PlayerMovement : CharacterBody2D
 {
 	private const float Speed = 300.0f;
 	private float _jumpVelocity = -400.0f;
@@ -10,11 +10,11 @@ public partial class player_movement : CharacterBody2D
 	private float _gravity;
 	private Vector2 _direction;
 	private bool _hasJumped;
-	private scene_modifiers _sceneModifiers;
+	private SceneModifiers _sceneModifiers;
 
 	public override void _PhysicsProcess(double delta)
 	{
-		_sceneModifiers = GetNode<scene_modifiers>("/root/world/scene_modifiers");
+		_sceneModifiers = GetNode<SceneModifiers>("/root/world/scene_modifiers");
 		_gravity = _sceneModifiers.GravityModifier;
 		_jumpVelocity = _sceneModifiers.JumpModifier;
 		Vector2 velocity = Velocity;
