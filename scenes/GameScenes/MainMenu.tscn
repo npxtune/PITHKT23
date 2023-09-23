@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://cbfwasywc7bbf"]
+[gd_scene load_steps=2 format=3 uid="uid://cbfwasywc7bbf"]
+
+[ext_resource type="Texture2D" uid="uid://ca8uhjun72fq8" path="res://Textures/Arcade.png" id="1_ysh7d"]
 
 [node name="Startscene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1281.5, 720)
+scale = Vector2(5.13, 5.09609)
+
+[node name="Arcade" type="Sprite2D" parent="."]
+position = Vector2(1281.5, 720)
+scale = Vector2(5.13, 5.09609)
+texture = ExtResource("1_ysh7d")

@@ -1,3 +1,23 @@
-[gd_scene format=3 uid="uid://d4hnx0vai8dno"]
+[gd_scene load_steps=2 format=3 uid="uid://d4hnx0vai8dno"]
+
+[ext_resource type="Texture2D" uid="uid://ca8uhjun72fq8" path="res://Textures/Arcade.png" id="1_fj0k1"]
 
 [node name="GameFinished" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1280, 712)
+scale = Vector2(22.7205, -17.384)
+
+[node name="Arcade" type="Sprite2D" parent="."]
+position = Vector2(1283, 715)
+scale = Vector2(5.144, 5.14591)
+texture = ExtResource("1_fj0k1")
+
+[node name="Label" type="Label" parent="Arcade"]
+offset_left = -68.2349
+offset_top = -25.2628
+offset_right = 55.7651
+offset_bottom = -2.26279
+text = "Congratulations"
+horizontal_alignment = 1
+vertical_alignment = 1
