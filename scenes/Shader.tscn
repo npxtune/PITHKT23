@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b70gmpmbsr5t5"]
+[gd_scene load_steps=10 format=3 uid="uid://b0sdlkgyj7mgu"]
 
 [ext_resource type="Shader" path="res://Shader/Shader.gdshader" id="1_kkb4s"]
 [ext_resource type="Script" path="res://scripts/shader.cs" id="1_mdek7"]
@@ -12,16 +12,16 @@ shader = ExtResource("1_kkb4s")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7hhii"]
 shader = ExtResource("1_kkb4s")
 
-[sub_resource type="Gradient" id="Gradient_j2ven"]
-offsets = PackedFloat32Array(0, 0.0774194, 0.703226, 0.748387, 0.980645, 0.987097, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0.313591, 0.313591, 0.313591, 1, 0.953665, 0.953665, 0.953665, 1, 0.907474, 0.907474, 0.907474, 1, 0.119629, 0.119629, 0.119629, 1, 0.0774194, 0.0774194, 0.0774194, 1, 0, 0, 0, 1)
+[sub_resource type="Gradient" id="Gradient_qf6a2"]
+offsets = PackedFloat32Array(0.322581, 0.916129, 0.96129)
+colors = PackedColorArray(0.15625, 0.15625, 0.15625, 1, 1, 1, 1, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_dennh"]
-gradient = SubResource("Gradient_j2ven")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ywlpe"]
+gradient = SubResource("Gradient_qf6a2")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 material = SubResource("ShaderMaterial_5lwqm")
 script = ExtResource("1_mdek7")
 
@@ -33,15 +33,15 @@ texture = ExtResource("3_jeh5c")
 
 [node name="Player" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(933, 675)
+position = Vector2(897, 694)
 texture = ExtResource("3_jeh5c")
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
 z_index = -1
-position = Vector2(1, 1)
-scale = Vector2(4.04061, -3.87551)
+position = Vector2(-3, 0)
+scale = Vector2(5.25531, -5.12236)
 energy = 2.68
-texture = SubResource("GradientTexture2D_dennh")
+texture = SubResource("GradientTexture2D_ywlpe")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1269, 716)
