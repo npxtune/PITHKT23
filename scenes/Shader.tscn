@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0sdlkgyj7mgu"]
+
+[ext_resource type="Shader" path="res://Shader/Shader.gdshader" id="1_kkb4s"]
+[ext_resource type="Script" path="res://scripts/shader.cs" id="1_mdek7"]
+[ext_resource type="Texture2D" uid="uid://dip4tr4mjndkk" path="res://assets/icon.svg" id="3_jeh5c"]
+[ext_resource type="Texture2D" uid="uid://dm022qj58p36p" path="res://assets/wand.png" id="4_kfgcm"]
+[ext_resource type="Shader" path="res://Shader/PlayerShader.gdshader" id="4_o6bl1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5lwqm"]
+shader = ExtResource("1_kkb4s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7hhii"]
+shader = ExtResource("1_kkb4s")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vvopr"]
+shader = ExtResource("4_o6bl1")
+
+[node name="Node2D" type="Node2D"]
+material = SubResource("ShaderMaterial_5lwqm")
+script = ExtResource("1_mdek7")
+
+[node name="Shader" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_7hhii")
+position = Vector2(1279, 726.375)
+scale = Vector2(20, 11.291)
+texture = ExtResource("3_jeh5c")
+
+[node name="Player" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_vvopr")
+position = Vector2(1188, 839)
+texture = ExtResource("3_jeh5c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(959, 835)
+scale = Vector2(10.0321, 4.12946)
+texture = ExtResource("4_kfgcm")
