@@ -52,7 +52,7 @@ public partial class PlayerMovement : CharacterBody2D
 			}
 		}
 		Velocity = velocity;
-		GD.Print(velocity.X + "\t" + velocity.Y + "\t" + _gravity);
+		//GD.Print(velocity.X + "\t" + velocity.Y + "\t" + _gravity);
 		MoveAndSlide();
 	}
 }
