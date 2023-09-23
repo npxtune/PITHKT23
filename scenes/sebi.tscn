@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://du7dal527wrk3"]
+[gd_scene load_steps=17 format=3 uid="uid://du7dal527wrk3"]
 
 [ext_resource type="Script" path="res://scripts/PlayerMovement.cs" id="1_syl5h"]
 [ext_resource type="Texture2D" uid="uid://b64pab4cwjqa4" path="res://Textures/Astronaut.png" id="2_0trwk"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/SceneModifiers.cs" id="4_jdgvr"]
 [ext_resource type="Script" path="res://scripts/CollisionEvents.cs" id="5_uo6fv"]
 [ext_resource type="Texture2D" uid="uid://d1txmxk06toel" path="res://Textures/Background_stars3.png" id="7_h1v3g"]
+[ext_resource type="Texture2D" uid="uid://ca8uhjun72fq8" path="res://Textures/Arcade.png" id="8_wk5ip"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8gu2e"]
 
@@ -83,13 +84,13 @@ metadata/_edit_group_ = true
 shape = SubResource("CapsuleShape2D_8gu2e")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(0, 123)
-scale = Vector2(1.91406, 1.77344)
+scale = Vector2(2.16, 2)
 texture = ExtResource("2_0trwk")
 hframes = 4
 vframes = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/Sprite2D"]
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_01ouu")
 }
@@ -108,7 +109,7 @@ texture = ExtResource("2_7qiot")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -112)
-zoom = Vector2(4, 4)
+zoom = Vector2(2, 2)
 
 [node name="restartExample" type="Node2D" parent="."]
 script = ExtResource("3_dascg")
@@ -141,13 +142,21 @@ position = Vector2(0, -1.00001)
 scale = Vector2(0.15625, 1.5)
 texture = ExtResource("2_7qiot")
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[node name="Background" type="ParallaxBackground" parent="."]
+follow_viewport_enabled = true
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Background"]
+follow_viewport_enabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(1, -106.5)
-scale = Vector2(2.25352, 2.33125)
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxBackground"]
+position = Vector2(3.00002, -116)
+scale = Vector2(2.46479, 2.45)
 texture = ExtResource("7_h1v3g")
+
+[node name="Forground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Forground"]
+texture = ExtResource("8_wk5ip")
 
 [connection signal="body_entered" from="spikes" to="spikes" method="OnSpikesBodyEntered"]
