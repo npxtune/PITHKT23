@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+[gd_scene load_steps=2 format=3 uid="uid://ddqoaq5snj3tn"]
+=======
 [gd_scene load_steps=2 format=3 uid="uid://bs2haabieo7aq"]
+>>>>>>> 8c5ba0ef813c706a0ac6f994e59e9e29ea8be263
 
 [ext_resource type="Script" path="res://scripts/Player.cs" id="1_7blpx"]
 
