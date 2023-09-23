@@ -1,7 +1,7 @@
 using Godot;
 namespace PITHKT23.scripts;
 
-public partial class scene_modifiers : Node
+public partial class SceneModifiers : Node
 {
 	[ExportGroup("Modifiers")]
 	[Export]
