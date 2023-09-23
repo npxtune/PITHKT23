@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b8j2ftayj8kdv"]
+[gd_scene load_steps=18 format=3 uid="uid://b8j2ftayj8kdv"]
 
 [ext_resource type="Script" path="res://scripts/PlayerMovement.cs" id="1_a565c"]
 [ext_resource type="Texture2D" uid="uid://b64pab4cwjqa4" path="res://Textures/Astronaut.png" id="2_73j61"]
@@ -6,10 +6,8 @@
 [ext_resource type="Script" path="res://scripts/Restart.cs" id="3_kafol"]
 [ext_resource type="Script" path="res://scripts/SceneModifiers.cs" id="4_73614"]
 [ext_resource type="Script" path="res://scripts/CollisionEvents.cs" id="5_m1ptm"]
-[ext_resource type="Texture2D" path="res://Textures/red_block.png" id="7_3du3i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jhfp0"]
-texture = ExtResource("7_3du3i")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
