@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b8j2ftayj8kdv"]
+[gd_scene load_steps=18 format=3 uid="uid://b8j2ftayj8kdv"]
 
 [ext_resource type="Script" path="res://scripts/PlayerMovement.cs" id="1_a565c"]
 [ext_resource type="Texture2D" uid="uid://b64pab4cwjqa4" path="res://Textures/Astronaut.png" id="2_73j61"]
@@ -6,6 +6,27 @@
 [ext_resource type="Script" path="res://scripts/Restart.cs" id="3_kafol"]
 [ext_resource type="Script" path="res://scripts/SceneModifiers.cs" id="4_73614"]
 [ext_resource type="Script" path="res://scripts/CollisionEvents.cs" id="5_m1ptm"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jhfp0"]
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_1i6jb"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_jhfp0")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_miqxu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plu7b"]
+size = Vector2(20, 194)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8rp7"]
+size = Vector2(640, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvhq7"]
+size = Vector2(160, 16)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8gu2e"]
 
@@ -63,47 +84,13 @@ _data = {
 "Sprung rechts": SubResource("Animation_sg5c0")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8rp7"]
-size = Vector2(640, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_miqxu"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_plu7b"]
-size = Vector2(20, 194)
-
 [node name="world" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-floor_stop_on_slope = false
-script = ExtResource("1_a565c")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("CapsuleShape2D_8gu2e")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(4.76837e-07, -9.53674e-07)
-scale = Vector2(1.91406, 1.77344)
-texture = ExtResource("2_73j61")
-hframes = 4
-vframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
-libraries = {
-"": SubResource("AnimationLibrary_01ouu")
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(0, 32)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_b8rp7")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-1.52588e-05, 1.90735e-06)
-scale = Vector2(5, 0.125)
-texture = ExtResource("2_dff4m")
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_1i6jb")
+format = 2
+layer_0/name = "Platforms"
+layer_0/tile_data = PackedInt32Array(-131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -131059, 0, 0, -131058, 0, 0, -131057, 0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -112)
@@ -127,17 +114,61 @@ shape = SubResource("RectangleShape2D_miqxu")
 scale = Vector2(0.15625, 0.15625)
 texture = ExtResource("2_dff4m")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="CollisionObjects" type="Node" parent="."]
+
+[node name="Wall" type="StaticBody2D" parent="CollisionObjects"]
 position = Vector2(312, 8)
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionObjects/Wall"]
 position = Vector2(0, -87)
 shape = SubResource("RectangleShape2D_plu7b")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="CollisionObjects/Wall/CollisionShape2D"]
 position = Vector2(0, -1.00001)
 scale = Vector2(0.15625, 1.5)
 texture = ExtResource("2_dff4m")
 
+[node name="Ground" type="StaticBody2D" parent="CollisionObjects"]
+position = Vector2(0, 32)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionObjects/Ground"]
+shape = SubResource("RectangleShape2D_b8rp7")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionObjects/Ground"]
+position = Vector2(-1.52588e-05, 1.90735e-06)
+scale = Vector2(5, 0.125)
+texture = ExtResource("2_dff4m")
+
+[node name="CollisionModifier" type="Area2D" parent="CollisionObjects"]
+position = Vector2(176, -24.5)
+script = ExtResource("5_m1ptm")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionObjects/CollisionModifier"]
+scale = Vector2(1, 1.05)
+shape = SubResource("RectangleShape2D_uvhq7")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+floor_stop_on_slope = false
+script = ExtResource("1_a565c")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_8gu2e")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(4.76837e-07, -9.53674e-07)
+scale = Vector2(1.91406, 1.77344)
+texture = ExtResource("2_73j61")
+hframes = 4
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+libraries = {
+"": SubResource("AnimationLibrary_01ouu")
+}
+
 [connection signal="body_entered" from="spikes" to="spikes" method="OnSpikesBodyEntered" flags=18]
+[connection signal="body_entered" from="CollisionObjects/CollisionModifier" to="CollisionObjects/CollisionModifier" method="OnPlatformBodyEntered"]
