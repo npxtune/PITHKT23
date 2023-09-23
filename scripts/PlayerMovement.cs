@@ -18,9 +18,10 @@ public partial class PlayerMovement : CharacterBody2D
 		_gravity = _sceneModifiers.GravityModifier;
 		_jumpVelocity = _sceneModifiers.JumpModifier;
 		Vector2 velocity = Velocity;
+        var ap = GetNode("AnimationPlayer") as AnimationPlayer;
 
-		// Add the gravity.
-		if (!IsOnFloor())
+        // Add the gravity.
+        if (!IsOnFloor())
 			velocity.Y += _gravity * (float)delta;
 
 		// Handle Jump.
@@ -38,7 +39,14 @@ public partial class PlayerMovement : CharacterBody2D
 		{
 			_direction = Input.GetVector("move_left", "move_right", "ui_up", "ui_down");
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
-		}
+			if (_direction.X > 0 && _direction.Y > 0)
+			{
+                ap.Play("Sprung rechts");
+            } else if (_direction.X < 0 && _direction.Y > 0) 
+			{
+                ap.Play("Sprung links");
+            }
+        }
 
 		if (_hasJumped)
 		{
