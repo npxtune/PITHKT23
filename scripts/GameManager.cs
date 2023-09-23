@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Diagnostics.Metrics;
 using System.Linq;
 
 public partial class GameManager : Node
@@ -10,14 +11,12 @@ public partial class GameManager : Node
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public void _Process(double delta)
 	{
-		GD.Print("fuuuuck");
 	}
 
 	public void _ReloadScene()
 	{
 		var reloadScene = Globals.listCounter;
 		var sceneToLoad = Globals.scenes[reloadScene];
-		PackedScene scene = GD.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn");
 		GetTree().ChangeSceneToFile("res://scenes/" + sceneToLoad + ".tscn");
 	}
 
@@ -39,19 +38,29 @@ public partial class GameManager : Node
 		Globals.listCounter = _nextScene;
 		var sceneToLoad = Globals.scenes[_nextScene];
 		GD.Print(sceneToLoad);
-		PackedScene scene = GD.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn");
-		GetTree().ChangeSceneToPacked(scene);
-		
-		//PackedScene scene = GD.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn");
-		//GetTree().ChangeSceneToFile("res://scenes/" + sceneToLoad + ".tscn");
-		//var next_level_resource = LoadScene("res://scenes/" + sceneToLoad + ".tscn");
-		//GetTree().ChangeSceneToFile("res://scenes/" + sceneToLoad + ".tscn");
+		GD.Print(GetTree().CurrentScene.SceneFilePath);
+		String loadingStr = "res://scenes/" + sceneToLoad + ".tscn";
+		GD.Print(loadingStr);
 
-		// Changing does not work
+        PackedScene PackedToLoad = GD.Load<PackedScene>(loadingStr);
 
 
+        /*
+        GetTree().ChangeSceneToFile(loadingStr);
+        GetTree().Free();
+        GD.Print(GetTree().CurrentScene);
+        GetTree().UnloadCurrentScene();
+		*/
 
-	}
+
+
+        //PackedScene scene = GD.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn");
+        //GetTree().ChangeSceneToFile("res://scenes/" + sceneToLoad + ".tscn");
+        //var next_level_resource = LoadScene("res://scenes/" + sceneToLoad + ".tscn");
+        //GetTree().ChangeSceneToFile("res://scenes/" + sceneToLoad + ".tscn");
+
+        // Changing does not work
+    }
 
 	public void _allLevelCompleted()
 	{
