@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://du7dal527wrk3"]
+[gd_scene load_steps=16 format=3 uid="uid://du7dal527wrk3"]
 
 [ext_resource type="Script" path="res://scripts/PlayerMovement.cs" id="1_syl5h"]
 [ext_resource type="Texture2D" uid="uid://b64pab4cwjqa4" path="res://Textures/Astronaut.png" id="2_0trwk"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://scripts/SceneModifiers.cs" id="4_jdgvr"]
 [ext_resource type="Script" path="res://scripts/CollisionEvents.cs" id="5_uo6fv"]
 [ext_resource type="Texture2D" uid="uid://d1txmxk06toel" path="res://Textures/Background_stars3.png" id="7_h1v3g"]
-[ext_resource type="Texture2D" uid="uid://ca8uhjun72fq8" path="res://Textures/Arcade.png" id="8_wk5ip"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8gu2e"]
 
@@ -152,11 +151,5 @@ follow_viewport_enabled = true
 position = Vector2(3.00002, -116)
 scale = Vector2(2.46479, 2.45)
 texture = ExtResource("7_h1v3g")
-
-[node name="Forground" type="ParallaxBackground" parent="."]
-scroll_base_scale = Vector2(2, 2)
-
-[node name="Sprite2D" type="Sprite2D" parent="Forground"]
-texture = ExtResource("8_wk5ip")
 
 [connection signal="body_entered" from="spikes" to="spikes" method="OnSpikesBodyEntered"]
