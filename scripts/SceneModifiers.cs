@@ -28,6 +28,7 @@ public partial class SceneModifiers : Node
         JumpModifier = baseJump  * (float)((J_Slider_Range.Value) / 50);
         Move_Level = InvertSpikes_Button.ButtonPressed;
         Invert_Flip = InvertSpikes_Button.ButtonPressed;
+        CollisionModifier = InvertSpikes_Button.ButtonPressed;
     
     
         var Camera = GetNode<Node2D>("Camera2D");
