@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://b70gmpmbsr5t5"]
+[gd_scene load_steps=9 format=3 uid="uid://b70gmpmbsr5t5"]
 
 [ext_resource type="Shader" path="res://Shader/Shader.gdshader" id="1_kkb4s"]
 [ext_resource type="Script" path="res://scripts/shader.cs" id="1_mdek7"]
 [ext_resource type="Texture2D" uid="uid://dip4tr4mjndkk" path="res://assets/icon.svg" id="3_jeh5c"]
-[ext_resource type="Texture2D" uid="uid://dm022qj58p36p" path="res://assets/wand.png" id="4_kfgcm"]
 [ext_resource type="Texture2D" uid="uid://crvjs33r0b1pq" path="res://Textures/background_stars2.png" id="5_fbdrp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5lwqm"]
@@ -52,7 +51,6 @@ modulate = Color(1, 1, 1, 0.815686)
 z_index = -1
 position = Vector2(908, 814)
 scale = Vector2(10.0321, 4.12946)
-texture = ExtResource("4_kfgcm")
 
 [node name="BackgroundStars" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.870588)

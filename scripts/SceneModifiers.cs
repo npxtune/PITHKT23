@@ -9,13 +9,13 @@ public partial class SceneModifiers : Node
     [Export] public bool CollisionModifier = false;
     [Export] public bool Move_Level = false;
     [Export] public bool Invert_Flip = false;
-
+    
     private float baseGravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
     private float baseJump = -400.0f;
     private float flipGravity = 1.0f;
-
+    
     private bool flipped;
-
+    
     public override void _Process(double delta)
     {
         //Getting data from Sliders and Buttons
@@ -28,25 +28,25 @@ public partial class SceneModifiers : Node
         JumpModifier = baseJump  * (float)((J_Slider_Range.Value) / 50);
         Move_Level = InvertSpikes_Button.ButtonPressed;
         Invert_Flip = InvertSpikes_Button.ButtonPressed;
-
-
+    
+    
         var Camera = GetNode<Node2D>("Camera2D");
         Camera.Transform.RotatedLocal(1);
-
+    
         if (Input.IsKeyPressed(Key.C))
         {
             GD.Print("Flip");
             InvertFlip();
         }
     }
-
+    
     private void InvertFlip()
     {
         var Player = GetNode("CharacterBody2D");
         var  Camera = GetNode<Node2D>("Camera2D");
         RayCast2D raycast = GetNode<RayCast2D>("CharacterBody2D/InverCast");
-
-
+    
+    
         if (Invert_Flip)
         {
             Camera.Transform.RotatedLocal(180);
