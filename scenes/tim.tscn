@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=10 format=3 uid="uid://b6nlcfoocegka"]
-=======
-[gd_scene load_steps=10 format=3 uid="uid://bxwpkqswc5ibn"]
->>>>>>> 8c5ba0ef813c706a0ac6f994e59e9e29ea8be263
+[gd_scene load_steps=10 format=3 uid="uid://b8j2ftayj8kdv"]
 
 [ext_resource type="Script" path="res://scripts/PlayerMovement.cs" id="1_a565c"]
 [ext_resource type="Texture2D" uid="uid://dip4tr4mjndkk" path="res://assets/icon.svg" id="2_dff4m"]

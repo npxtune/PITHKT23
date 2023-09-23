@@ -1,26 +1,20 @@
 using Godot;
-using System;
+namespace PITHKT23.scripts;
 
 public partial class LoadScene : Button
 {
-	private GameManager _gameManager;
-	// Called when the node enters the scene tree for the first time.
+	private PITHKT23.scripts.GameManager _gameManager;
 	public override void _Ready()
 	{
-		_gameManager = GetNode<GameManager>("/root/GameManagerDev/GM-Node");
-		GD.Print("fuuuck");
+		_gameManager = GetNode<PITHKT23.scripts.GameManager>("/root/Node2D/GM-Node");
+		GD.Print("LoadScene script initialized");
 		
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
 	}
 	
 	private void OnButtonPressed()
 	{
 		GD.Print("button pressed");
-		_gameManager._LoadNextScene();
+		_gameManager.LoadNextScene();
 		
 	}
 }
