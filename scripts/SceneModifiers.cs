@@ -8,7 +8,6 @@ public partial class SceneModifiers : Node
     [Export] public float JumpModifier = -400.0f;
     [Export] public bool CollisionModifier = false;
     [Export] public bool Move_Level = false;
-    [Export] public bool InvertSpikes = false;
     [Export] public bool Invert_Flip = false;
 
     private float baseGravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
@@ -28,7 +27,6 @@ public partial class SceneModifiers : Node
         GravityModifier = baseGravity  * (float)((G_Slider_Range.Value) / 50) * flipGravity;
         JumpModifier = baseJump  * (float)((J_Slider_Range.Value) / 50);
         Move_Level = InvertSpikes_Button.ButtonPressed;
-        InvertSpikes = InvertSpikes_Button.ButtonPressed;
         Invert_Flip = InvertSpikes_Button.ButtonPressed;
 
 
