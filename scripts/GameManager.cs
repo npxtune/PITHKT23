@@ -12,6 +12,11 @@ public partial class GameManager : Node
 	// 	GetTree().ChangeSceneToFile("res://scenes/" + sceneToLoad + ".tscn");
 	// }
 
+	public override void _Ready()
+	{
+		GD.Print(GetPath());
+	}
+
 	public void LoadNextScene(int loadSceneIndex = -1)
 	{
 		var currentScene = GetTree().CurrentScene;

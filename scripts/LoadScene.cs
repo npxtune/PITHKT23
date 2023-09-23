@@ -6,7 +6,7 @@ public partial class LoadScene : Button
 	private PITHKT23.scripts.GameManager _gameManager;
 	public override void _Ready()
 	{
-		_gameManager = GetNode<PITHKT23.scripts.GameManager>("/root/Node2D/GM-Node");
+		_gameManager = GetNode<PITHKT23.scripts.GameManager>("/root/GameManager");
 		GD.Print("LoadScene script initialized");
 		
 	}
