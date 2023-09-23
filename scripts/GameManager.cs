@@ -1,17 +1,16 @@
-using System.Transactions;
 using Godot;
 namespace PITHKT23.scripts;
 
 public partial class GameManager : Node
 { 
 	private static int _nextScene;
-	private void ReloadScene()
-	{
-		var reloadScene = Globals.listCounter;
-		var sceneToLoad = Globals.scenes[reloadScene];
-		var scene = ResourceLoader.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn");
-		GetTree().ChangeSceneToFile("res://scenes/" + sceneToLoad + ".tscn");
-	}
+	// private void ReloadScene()
+	// {
+	// 	var reloadScene = Globals.listCounter;
+	// 	var sceneToLoad = Globals.scenes[reloadScene];
+	// 	var scene = ResourceLoader.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn");
+	// 	GetTree().ChangeSceneToFile("res://scenes/" + sceneToLoad + ".tscn");
+	// }
 
 	public void LoadNextScene(int loadSceneIndex = -1)
 	{
