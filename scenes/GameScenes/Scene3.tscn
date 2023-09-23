@@ -361,7 +361,7 @@ offset_left = 43.0
 offset_top = -209.0
 offset_right = 109.0
 offset_bottom = -193.0
-value = 50.0
+value = 30.0
 
 [node name="Label" type="Label" parent="scene_modifiers/Gravity-Slider"]
 layout_mode = 0

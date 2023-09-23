@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://1echg776ddv6"]
+[gd_scene load_steps=18 format=3 uid="uid://bu22y5ic5e0oy"]
 
 [ext_resource type="Texture2D" uid="uid://d1txmxk06toel" path="res://Textures/Background_stars3.png" id="1_d63nd"]
 [ext_resource type="TileSet" uid="uid://cobsie8x337nm" path="res://TileSets/Scene1.tres" id="2_clo3v"]
@@ -77,7 +77,7 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ic0vw"]
 size = Vector2(736, 26)
 
-[node name="world" type="Node2D"]
+[node name="world2" type="Node2D"]
 
 [node name="BackgroundStars" type="Sprite2D" parent="."]
 position = Vector2(1.09673e-05, -124)
