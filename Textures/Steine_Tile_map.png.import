@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwhyx2u81v3os"
-path="res://.godot/imported/red_ore1.png-ee76f03968462821cba95869aaeca0b8.ctex"
+uid="uid://pue2na3wwbwa"
+path="res://.godot/imported/Steine_Tile_map.png-4e9105c3aa1787ec293290c12b2595a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/red_ore1.png"
-dest_files=["res://.godot/imported/red_ore1.png-ee76f03968462821cba95869aaeca0b8.ctex"]
+source_file="res://Textures/Steine_Tile_map.png"
+dest_files=["res://.godot/imported/Steine_Tile_map.png-4e9105c3aa1787ec293290c12b2595a7.ctex"]
 
 [params]
 
