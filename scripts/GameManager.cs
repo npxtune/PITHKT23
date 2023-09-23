@@ -5,32 +5,32 @@ namespace PITHKT23.scripts;
 public partial class GameManager : Node
 { 
 	private static int _nextScene;
-	private void ReloadScene()
-	{
-		var reloadScene = Globals.listCounter;
-		var sceneToLoad = Globals.scenes[reloadScene];
-		var scene = ResourceLoader.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn");
-		GetTree().ChangeSceneToFile("res://scenes/" + sceneToLoad + ".tscn");
-	}
+	// private void ReloadScene()
+	// {
+	// 	var reloadScene = Globals.listCounter;
+	// 	var sceneToLoad = Globals.scenes[reloadScene];
+	// 	var scene = ResourceLoader.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn");
+	// 	GetTree().ChangeSceneToFile("res://scenes/" + sceneToLoad + ".tscn");
+	// }
 
 	public void LoadNextScene(int loadSceneIndex = -1)
 	{
 		var currentScene = GetTree().CurrentScene;
 		if (loadSceneIndex == -1)
 		{
-			_nextScene =  Globals.listCounter + 1; 
+			_nextScene =  Globals.ListCounter + 1; 
 		}
 		else
 		{
 			_nextScene = loadSceneIndex; 
 		}
-		if (Globals.scenes.Count == Globals.listCounter + 1)
+		if (Globals.Scenes.Count == Globals.ListCounter + 1)
 		{
 			_allLevelCompleted();
 			return;
 		}
-		Globals.listCounter = _nextScene;
-		var sceneToLoad = Globals.scenes[_nextScene];
+		Globals.ListCounter = _nextScene;
+		var sceneToLoad = Globals.Scenes[_nextScene];
 		GD.Print(sceneToLoad);
 		var scene = ResourceLoader.Load<PackedScene>("res://scenes/" + sceneToLoad + ".tscn").Instantiate();
 		GetTree().Root.AddChild(scene);
