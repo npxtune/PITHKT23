@@ -1,10 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://b0sdlkgyj7mgu"]
+[gd_scene load_steps=10 format=3 uid="uid://b0sdlkgyj7mgu"]
 
 [ext_resource type="Shader" path="res://Shader/Shader.gdshader" id="1_kkb4s"]
 [ext_resource type="Script" path="res://scripts/shader.cs" id="1_mdek7"]
 [ext_resource type="Texture2D" uid="uid://dip4tr4mjndkk" path="res://assets/icon.svg" id="3_jeh5c"]
 [ext_resource type="Texture2D" uid="uid://dm022qj58p36p" path="res://assets/wand.png" id="4_kfgcm"]
-[ext_resource type="Shader" path="res://Shader/PlayerShader.gdshader" id="4_o6bl1"]
+[ext_resource type="Texture2D" uid="uid://crvjs33r0b1pq" path="res://Textures/background_stars2.png" id="5_fbdrp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5lwqm"]
 shader = ExtResource("1_kkb4s")
@@ -12,8 +12,14 @@ shader = ExtResource("1_kkb4s")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7hhii"]
 shader = ExtResource("1_kkb4s")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_vvopr"]
-shader = ExtResource("4_o6bl1")
+[sub_resource type="Gradient" id="Gradient_j2ven"]
+offsets = PackedFloat32Array(0, 0.0774194, 0.703226, 0.748387, 0.980645, 0.987097, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.313591, 0.313591, 0.313591, 1, 0.953665, 0.953665, 0.953665, 1, 0.907474, 0.907474, 0.907474, 1, 0.119629, 0.119629, 0.119629, 1, 0.0774194, 0.0774194, 0.0774194, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dennh"]
+gradient = SubResource("Gradient_j2ven")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [node name="Node2D" type="Node2D"]
 material = SubResource("ShaderMaterial_5lwqm")
@@ -21,17 +27,36 @@ script = ExtResource("1_mdek7")
 
 [node name="Shader" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_7hhii")
-position = Vector2(1279, 726.375)
+position = Vector2(4495, 998)
 scale = Vector2(20, 11.291)
 texture = ExtResource("3_jeh5c")
 
 [node name="Player" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_vvopr")
-position = Vector2(1188, 839)
+z_index = 1
+position = Vector2(933, 675)
 texture = ExtResource("3_jeh5c")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
 z_index = -1
-position = Vector2(959, 835)
+position = Vector2(1, 1)
+scale = Vector2(4.04061, -3.87551)
+energy = 2.68
+texture = SubResource("GradientTexture2D_dennh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1269, 716)
+scale = Vector2(5.35937, 4.23438)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.815686)
+z_index = -1
+position = Vector2(908, 814)
 scale = Vector2(10.0321, 4.12946)
 texture = ExtResource("4_kfgcm")
+
+[node name="BackgroundStars" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.870588)
+light_mask = 0
+position = Vector2(1274, 733)
+scale = Vector2(9.64957, 10.1207)
+texture = ExtResource("5_fbdrp")
