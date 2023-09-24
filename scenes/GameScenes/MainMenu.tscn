@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbfwasywc7bbf"]
+[gd_scene load_steps=3 format=3 uid="uid://cbfwasywc7bbf"]
 
 [ext_resource type="Texture2D" uid="uid://ca8uhjun72fq8" path="res://Textures/Arcade.png" id="1_ysh7d"]
+[ext_resource type="Texture2D" uid="uid://bp4afdbqtc180" path="res://Textures/pixil-frame-0 (4).png" id="2_lxfbr"]
 
 [node name="Startscene" type="Node2D"]
 
@@ -12,3 +13,8 @@ scale = Vector2(5.13, 5.09609)
 position = Vector2(1281.5, 720)
 scale = Vector2(5.13, 5.09609)
 texture = ExtResource("1_ysh7d")
+
+[node name="Pixil-frame-0(4)" type="Sprite2D" parent="."]
+position = Vector2(1263, 677)
+scale = Vector2(5.82394, 4.85)
+texture = ExtResource("2_lxfbr")
