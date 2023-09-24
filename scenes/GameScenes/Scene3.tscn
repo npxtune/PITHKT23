@@ -230,3 +230,4 @@ text = "InvertSpikes"
 [connection signal="body_entered" from="CollisionObjects/Exit" to="CollisionObjects/Exit" method="OnExitBodyEntered" flags=18]
 [connection signal="body_entered" from="CollisionObjects/CollisionModifier3" to="CollisionObjects/CollisionModifier3" method="OnPlatformBodyEntered" flags=18]
 [connection signal="body_entered" from="CollisionObjects/CollisionModifier4" to="CollisionObjects/CollisionModifier4" method="OnPlatformBodyEntered" flags=18]
+[connection signal="value_changed" from="scene_modifiers/Gravity-Slider" to="scene_modifiers" method="GravitySliderChanged"]
