@@ -182,3 +182,4 @@ text = "Jump"
 [connection signal="body_entered" from="spikes" to="spikes" method="OnSpikesBodyEntered" flags=18]
 [connection signal="body_entered" from="CollisionObjects/CollisionModifier" to="CollisionObjects/CollisionModifier" method="OnPlatformBodyEntered" flags=18]
 [connection signal="body_entered" from="CollisionObjects/Exit" to="CollisionObjects/Exit" method="OnExitBodyEntered" flags=18]
+[connection signal="value_changed" from="scene_modifiers/Jump-Slider" to="scene_modifiers" method="JumpSliderChanged"]

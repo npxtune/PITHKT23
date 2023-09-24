@@ -79,13 +79,13 @@ offset_left = -91.0
 offset_top = -1.0
 offset_right = 5.0
 offset_bottom = 22.0
-text = "InvertSpikes"
+text = "CollisionMod"
 
 [node name="Move_Level" type="CheckButton" parent="scene_modifiers"]
-offset_left = 78.0
-offset_top = -277.0
-offset_right = 122.0
-offset_bottom = -253.0
+offset_left = 80.0
+offset_top = -256.0
+offset_right = 124.0
+offset_bottom = -232.0
 
 [node name="Label" type="Label" parent="scene_modifiers/Move_Level"]
 layout_mode = 0
@@ -93,21 +93,7 @@ offset_left = -91.0
 offset_top = -1.0
 offset_right = 5.0
 offset_bottom = 22.0
-text = "Move_Level"
-
-[node name="Invert_Flip" type="CheckButton" parent="scene_modifiers"]
-offset_left = 77.0
-offset_top = -257.0
-offset_right = 121.0
-offset_bottom = -233.0
-
-[node name="Label" type="Label" parent="scene_modifiers/Invert_Flip"]
-layout_mode = 0
-offset_left = -91.0
-offset_top = -1.0
-offset_right = 5.0
-offset_bottom = 22.0
-text = "Invert_Flip"
+text = "MoveLevel"
 
 [node name="spikes" type="Area2D" parent="."]
 position = Vector2(-144, 8)
@@ -150,4 +136,6 @@ texture = ExtResource("2_dff4m")
 
 [connection signal="value_changed" from="scene_modifiers/Gravity-Slider" to="scene_modifiers" method="GravitySliderChanged"]
 [connection signal="value_changed" from="scene_modifiers/Jump-Slider" to="scene_modifiers" method="JumpSliderChanged"]
+[connection signal="toggled" from="scene_modifiers/InvertSpikes" to="scene_modifiers" method="CollisionBoolChanged"]
+[connection signal="toggled" from="scene_modifiers/Move_Level" to="scene_modifiers" method="MoveLevelBoolChanged"]
 [connection signal="body_entered" from="spikes" to="spikes" method="OnSpikesBodyEntered"]
