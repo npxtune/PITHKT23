@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b7h4yhugmylh3"]
+[gd_scene load_steps=18 format=3 uid="uid://j1ubr1g6qqrh"]
 
 [ext_resource type="Texture2D" uid="uid://d1txmxk06toel" path="res://Textures/Background_stars3.png" id="1_d63nd"]
 [ext_resource type="TileSet" uid="uid://cobsie8x337nm" path="res://TileSets/Scene1.tres" id="2_clo3v"]
