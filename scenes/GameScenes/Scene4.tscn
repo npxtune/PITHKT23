@@ -15,7 +15,7 @@ size = Vector2(194.484, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h4tiv"]
 
-[node name="world" type="Node2D"]
+[node name="world3" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_4ean8")
