@@ -24,22 +24,22 @@ public partial class SceneModifiers : Node
     //     CollisionModifier = InvertSpikes_Button.ButtonPressed;
     // }
 
-    private void GravitySliderChanged(Slider slider)
+    private void GravitySliderChanged(float value)
     {
-        // TODO slider range
+        GD.Print(value);
     }
 
-    private void JumpSliderChanged(Slider slider)
+    private void JumpSliderChanged(float value)
     {
-        // TODO slider range
+        GD.Print(value);
     }
 
-    private void CollisionBoolChanged(Button button)
+    private void CollisionBoolChanged(bool isPressed)
     {
         // TODO button press
     }
 
-    private void MoveLevelBoolChanged(Button button)
+    private void MoveLevelBoolChanged(bool isPressed)
     {
         // TODO button press + move level??
     }
