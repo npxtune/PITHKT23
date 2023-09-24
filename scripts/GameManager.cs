@@ -38,12 +38,12 @@ public partial class GameManager : Node
 
 	public override void _PhysicsProcess(double delta)
 	{
-		if (Input.IsActionPressed("pause_game") && GetTree().Paused != true)
+		if (Input.IsActionJustPressed("pause_game") && GetTree().Paused != true)
 		{
 			GD.Print("PAUSED");
 			GetTree().Paused = true;
 		}
-		else
+		else if (Input.IsActionJustPressed("pause_game"))
 		{
 			GD.Print("UNPAUSED");
 			GetTree().Paused = false;
