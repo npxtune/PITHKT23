@@ -354,7 +354,6 @@ libraries = {
 position = Vector2(-224, -13)
 script = ExtResource("3_bud5h")
 GravityModifier = 400.0
-CollisionModifier = true
 
 [node name="Gravity-Slider" type="HSlider" parent="scene_modifiers"]
 offset_left = 43.0
