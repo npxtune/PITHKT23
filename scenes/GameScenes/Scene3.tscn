@@ -354,13 +354,13 @@ libraries = {
 position = Vector2(-224, -13)
 script = ExtResource("3_bud5h")
 GravityModifier = 400.0
-CollisionModifier = true
 
 [node name="Gravity-Slider" type="HSlider" parent="scene_modifiers"]
 offset_left = 43.0
 offset_top = -209.0
 offset_right = 109.0
 offset_bottom = -193.0
+focus_mode = 0
 value = 30.0
 
 [node name="Label" type="Label" parent="scene_modifiers/Gravity-Slider"]
@@ -371,27 +371,12 @@ offset_right = -6.0
 offset_bottom = 21.0
 text = "Gravity"
 
-[node name="Jump-Slider" type="HSlider" parent="scene_modifiers"]
-visible = false
-offset_left = 79.0
-offset_top = -186.0
-offset_right = 294.0
-offset_bottom = -170.0
-value = 50.0
-
-[node name="Label" type="Label" parent="scene_modifiers/Jump-Slider"]
-layout_mode = 0
-offset_left = -52.0
-offset_top = -3.0
-offset_right = -11.0
-offset_bottom = 20.0
-text = "Jump"
-
 [node name="InvertSpikes" type="CheckButton" parent="scene_modifiers"]
 offset_left = 77.0
 offset_top = -233.0
 offset_right = 121.0
 offset_bottom = -209.0
+focus_mode = 0
 
 [node name="Label" type="Label" parent="scene_modifiers/InvertSpikes"]
 layout_mode = 0
@@ -400,36 +385,6 @@ offset_top = -1.0
 offset_right = 5.0
 offset_bottom = 22.0
 text = "InvertSpikes"
-
-[node name="Move_Level" type="CheckButton" parent="scene_modifiers"]
-visible = false
-offset_left = 78.0
-offset_top = -277.0
-offset_right = 122.0
-offset_bottom = -253.0
-
-[node name="Label" type="Label" parent="scene_modifiers/Move_Level"]
-layout_mode = 0
-offset_left = -91.0
-offset_top = -1.0
-offset_right = 5.0
-offset_bottom = 22.0
-text = "Move_Level"
-
-[node name="Invert_Flip" type="CheckButton" parent="scene_modifiers"]
-visible = false
-offset_left = 77.0
-offset_top = -257.0
-offset_right = 121.0
-offset_bottom = -233.0
-
-[node name="Label" type="Label" parent="scene_modifiers/Invert_Flip"]
-layout_mode = 0
-offset_left = -91.0
-offset_top = -1.0
-offset_right = 5.0
-offset_bottom = 22.0
-text = "Invert_Flip"
 
 [connection signal="body_entered" from="spikes" to="spikes" method="OnSpikesBodyEntered" flags=18]
 [connection signal="body_entered" from="CollisionObjects/CollisionModifier" to="CollisionObjects/CollisionModifier" method="OnPlatformBodyEntered" flags=18]
