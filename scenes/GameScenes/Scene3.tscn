@@ -74,7 +74,7 @@ _data = {
 "Sprung rechts": SubResource("Animation_sg5c0")
 }
 
-[node name="world2" type="Node2D"]
+[node name="world" type="Node2D"]
 
 [node name="BackgroundStars2" type="Sprite2D" parent="."]
 position = Vector2(0, -112)
