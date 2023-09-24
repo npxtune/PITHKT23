@@ -196,10 +196,10 @@ GravityModifier = 400.0
 [node name="Gravity-Slider" type="HSlider" parent="scene_modifiers"]
 offset_left = 43.0
 offset_top = -209.0
-offset_right = 109.0
+offset_right = 208.0
 offset_bottom = -193.0
 focus_mode = 0
-value = 30.0
+value = 50.0
 
 [node name="Label" type="Label" parent="scene_modifiers/Gravity-Slider"]
 layout_mode = 0
@@ -231,3 +231,4 @@ text = "InvertSpikes"
 [connection signal="body_entered" from="CollisionObjects/CollisionModifier3" to="CollisionObjects/CollisionModifier3" method="OnPlatformBodyEntered" flags=18]
 [connection signal="body_entered" from="CollisionObjects/CollisionModifier4" to="CollisionObjects/CollisionModifier4" method="OnPlatformBodyEntered" flags=18]
 [connection signal="value_changed" from="scene_modifiers/Gravity-Slider" to="scene_modifiers" method="GravitySliderChanged"]
+[connection signal="toggled" from="scene_modifiers/InvertSpikes" to="scene_modifiers" method="CollisionBoolChanged"]
