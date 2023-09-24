@@ -7,7 +7,7 @@ void vertex() {
 void fragment() {
 	vec4 tex = texture(TEXTURE, UV);
 	
-	COLOR = mix(tex, vec4(0.25,0.25,0.25,0.3), 0.7);
+	COLOR = mix(tex, vec4(0.1,0.25,0.25,0.3), 0.4);
 }
 
 void light() {

@@ -1,3 +1,342 @@
-[gd_scene format=3 uid="uid://bp0gjp7i7daau"]
+[gd_scene load_steps=21 format=3 uid="uid://bp0gjp7i7daau"]
+
+[ext_resource type="Texture2D" uid="uid://pue2na3wwbwa" path="res://Textures/Steine_Tile_map.png" id="1_0yugl"]
+[ext_resource type="Shader" path="res://Shader/PlayerShader.gdshader" id="1_ma34h"]
+[ext_resource type="Script" path="res://scripts/CollisionEvents.cs" id="2_swjrn"]
+[ext_resource type="Texture2D" uid="uid://hd5we2hqw6n6" path="res://Textures/portal.png" id="3_qnk7h"]
+[ext_resource type="Script" path="res://scripts/PlayerMovement.cs" id="4_mejus"]
+[ext_resource type="Texture2D" uid="uid://b64pab4cwjqa4" path="res://Textures/Astronaut.png" id="5_8h1xw"]
+[ext_resource type="Texture2D" uid="uid://crvjs33r0b1pq" path="res://Textures/background_stars2.png" id="6_to1do"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mdx3h"]
+shader = ExtResource("1_ma34h")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p2whh"]
+texture = ExtResource("1_0yugl")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0 = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0 = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+6:0/0 = 0
+6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0 = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0 = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+5:1/0 = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+6:1/0 = 0
+6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0 = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0 = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+5:2/0 = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
+6:2/0 = 0
+6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:2/0/physics_layer_0/angular_velocity = 0.0
+0:3/0 = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0 = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0 = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0 = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0 = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+5:3/0 = 0
+5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:3/0/physics_layer_0/angular_velocity = 0.0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0 = 0
+6:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:3/0/physics_layer_0/angular_velocity = 0.0
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+1:4/0 = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0 = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0 = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+4:4/0 = 0
+4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:4/0/physics_layer_0/angular_velocity = 0.0
+5:4/0 = 0
+5:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:4/0/physics_layer_0/angular_velocity = 0.0
+6:4/0 = 0
+6:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:4/0/physics_layer_0/angular_velocity = 0.0
+0:5/0 = 0
+0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:5/0/physics_layer_0/angular_velocity = 0.0
+1:5/0 = 0
+1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:5/0/physics_layer_0/angular_velocity = 0.0
+2:5/0 = 0
+2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:5/0/physics_layer_0/angular_velocity = 0.0
+3:5/0 = 0
+3:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:5/0/physics_layer_0/angular_velocity = 0.0
+4:5/0 = 0
+4:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:5/0/physics_layer_0/angular_velocity = 0.0
+5:5/0 = 0
+5:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:5/0/physics_layer_0/angular_velocity = 0.0
+6:5/0 = 0
+6:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:5/0/physics_layer_0/angular_velocity = 0.0
+0:6/0 = 0
+0:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:6/0/physics_layer_0/angular_velocity = 0.0
+1:6/0 = 0
+1:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:6/0/physics_layer_0/angular_velocity = 0.0
+2:6/0 = 0
+2:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:6/0/physics_layer_0/angular_velocity = 0.0
+3:6/0 = 0
+3:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:6/0/physics_layer_0/angular_velocity = 0.0
+4:6/0 = 0
+4:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:6/0/physics_layer_0/angular_velocity = 0.0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:6/0 = 0
+5:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:6/0/physics_layer_0/angular_velocity = 0.0
+6:6/0 = 0
+6:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:6/0/physics_layer_0/angular_velocity = 0.0
+0:7/0 = 0
+0:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:7/0/physics_layer_0/angular_velocity = 0.0
+1:7/0 = 0
+1:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:7/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_hhel0"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_p2whh")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8m6n2"]
+size = Vector2(493, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5j3w"]
+size = Vector2(20, 26)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q1xsj"]
+
+[sub_resource type="Animation" id="Animation_diigh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_sxdih"]
+resource_name = "Sprung links"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_sg5c0"]
+resource_name = "Sprung rechts"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 5, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_01ouu"]
+_data = {
+"RESET": SubResource("Animation_diigh"),
+"Sprung links": SubResource("Animation_sxdih"),
+"Sprung rechts": SubResource("Animation_sg5c0")
+}
+
+[sub_resource type="Gradient" id="Gradient_qf6a2"]
+offsets = PackedFloat32Array(0.322581, 0.916129, 0.96129)
+colors = PackedColorArray(0.15625, 0.15625, 0.15625, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_swi8u"]
+gradient = SubResource("Gradient_qf6a2")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywxhk"]
+size = Vector2(20, 26)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_mdx3h")
+position = Vector2(-556, 226)
+scale = Vector2(1.91406, 1.77344)
+tile_set = SubResource("TileSet_hhel0")
+format = 2
+layer_0/name = "Platforms"
+layer_0/tile_data = PackedInt32Array(262138, 65537, 3, 262139, 65537, 3, 262140, 65537, 3, 262141, 65537, 3, 262142, 65537, 3, 262143, 65537, 3, 131072, 65537, 3, -65536, 65537, 3, -65535, 65537, 3, 65535, 65537, 3, 65534, 65537, 3, 65533, 65537, 3, 131069, 65537, 3, 131068, 65537, 3, 131070, 65537, 3, 131071, 65537, 3, 65536, 65537, 3, 65537, 65537, 3, 65538, 65537, 3, 1, 65537, 3, 0, 65537, 3, 65532, 65537, 3, 65531, 65537, 3, 65530, 65537, 3, 65529, 65537, 3, 131067, 65537, 3)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(260, 141)
+zoom = Vector2(2, 2)
+
+[node name="spikes" type="Area2D" parent="."]
+position = Vector2(635, -118)
+script = ExtResource("2_swjrn")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spikes"]
+position = Vector2(-239.5, 1.5)
+shape = SubResource("RectangleShape2D_8m6n2")
+
+[node name="Exit2" type="Area2D" parent="."]
+position = Vector2(454.07, 149.812)
+scale = Vector2(1.91406, 1.77344)
+script = ExtResource("2_swjrn")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit2"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_n5j3w")
+
+[node name="Sprite2D" type="Sprite2D" parent="Exit2"]
+position = Vector2(0, -4)
+scale = Vector2(1, 1.5)
+texture = ExtResource("3_qnk7h")
+
+[node name="Character" type="CharacterBody2D" parent="."]
+z_index = 1
+position = Vector2(77, 164)
+floor_stop_on_slope = false
+script = ExtResource("4_mejus")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
+shape = SubResource("CapsuleShape2D_q1xsj")
+
+[node name="Sprite2D" type="Sprite2D" parent="Character"]
+position = Vector2(4.76837e-07, -9.53674e-07)
+scale = Vector2(1.91406, 1.77344)
+texture = ExtResource("5_8h1xw")
+hframes = 4
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Character"]
+libraries = {
+"": SubResource("AnimationLibrary_01ouu")
+}
+
+[node name="PointLight2D" type="PointLight2D" parent="Character"]
+z_index = -1
+position = Vector2(0, -3)
+scale = Vector2(3.625, -3.79688)
+energy = 2.68
+texture = SubResource("GradientTexture2D_swi8u")
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(1726, 914)
+script = ExtResource("2_swjrn")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_ywxhk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Exit"]
+position = Vector2(0, -4)
+scale = Vector2(1, 1.5)
+texture = ExtResource("3_qnk7h")
+
+[node name="BackgroundStars" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.870588)
+light_mask = 0
+position = Vector2(259, 141)
+scale = Vector2(4.52113, 4.525)
+texture = ExtResource("6_to1do")
+
+[connection signal="body_entered" from="spikes" to="spikes" method="OnSpikesBodyEntered" flags=18]
+[connection signal="body_entered" from="Exit2" to="Exit2" method="OnExitBodyEntered" flags=18]
+[connection signal="body_entered" from="Exit" to="Exit" method="OnExitBodyEntered" flags=18]

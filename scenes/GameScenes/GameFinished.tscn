@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4hnx0vai8dno"]
+[gd_scene load_steps=3 format=3 uid="uid://d4hnx0vai8dno"]
 
 [ext_resource type="Texture2D" uid="uid://ca8uhjun72fq8" path="res://Textures/Arcade.png" id="1_fj0k1"]
+[ext_resource type="Texture2D" uid="uid://bp4afdbqtc180" path="res://Textures/pixil-frame-0 (4).png" id="2_f0clb"]
 
 [node name="GameFinished" type="Node2D"]
 
@@ -13,11 +14,7 @@ position = Vector2(1283, 715)
 scale = Vector2(5.144, 5.14591)
 texture = ExtResource("1_fj0k1")
 
-[node name="Label" type="Label" parent="Arcade"]
-offset_left = -68.2349
-offset_top = -25.2628
-offset_right = 55.7651
-offset_bottom = -2.26279
-text = "Congratulations"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="credits" type="Sprite2D" parent="."]
+position = Vector2(1276, 666.5)
+scale = Vector2(5.80986, 4.95625)
+texture = ExtResource("2_f0clb")
