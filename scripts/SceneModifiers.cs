@@ -26,12 +26,12 @@ public partial class SceneModifiers : Node
 
     private void GravitySliderChanged(float value)
     {
-        GD.Print(value);
+        GD.Print(GravityModifier * (value / 50));
     }
 
     private void JumpSliderChanged(float value)
     {
-        GD.Print(value);
+        GD.Print(JumpModifier * (value / 50));
     }
 
     private void CollisionBoolChanged(bool isPressed)

@@ -149,4 +149,5 @@ scale = Vector2(0.15625, 1.5)
 texture = ExtResource("2_dff4m")
 
 [connection signal="value_changed" from="scene_modifiers/Gravity-Slider" to="scene_modifiers" method="GravitySliderChanged"]
+[connection signal="value_changed" from="scene_modifiers/Jump-Slider" to="scene_modifiers" method="JumpSliderChanged"]
 [connection signal="body_entered" from="spikes" to="spikes" method="OnSpikesBodyEntered"]
