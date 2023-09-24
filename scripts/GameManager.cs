@@ -35,4 +35,18 @@ public partial class GameManager : Node
 	{
 		GD.Print("All level completed");
 	}
+
+	public override void _PhysicsProcess(double delta)
+	{
+		if (Input.IsActionPressed("pause_game") && GetTree().Paused != true)
+		{
+			GD.Print("PAUSED");
+			GetTree().Paused = true;
+		}
+		else
+		{
+			GD.Print("UNPAUSED");
+			GetTree().Paused = false;
+		}
+	}
 }
